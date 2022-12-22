@@ -1,0 +1,47 @@
+\RequirePackage{fix-cm}
+\documentclass[12pt]{article}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage{setspace,graphicx,epstopdf,amsmath,amsfonts,amssymb,amsthm, lscape, flafter, hyperref,float, caption, tabularx, marginnote,datetime,enumitem,subfigure,rotating,fancyvrb, mathtools, booktabs, changepage, setspace, placeins, threeparttable, ragged2e, stmaryrd}
+\usepackage[longnamesfirst]{natbib}
+\usepackage[export]{adjustbox}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% raggedleft column X
+\usdate
+\usepackage[a4paper,bindingoffset=0.2in,%
+            left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
+            footskip=.35in]{geometry}
+            
+\newcommand{\owntag}[1]{\stepcounter{equation}\tag{\theequation, #1}}
+\makeatother
+
+% this is the paper, based on i10.2 for aec510 spring 21.
+% this is a renamed version as of 5/6/22.
+
+\setcounter{tocdepth}{2}
+
+% JF-specific includes:
+
+\usepackage{indentfirst} % Indent first sentence of a new section.
+\usepackage{endnotes}    % Use endnotes instead of footnotes
+
+\begin{document}
+
+
+
+\section{Monetary Uncertainty} \label{sec:Model}
+
+The Fed determines monetary policy according to its mandate, trying to achieve price stability and maximum employment. Thus as economic environment changes, the Fed is supposed to adjust its monetary policy. In practice it usually means cutting Fed Funds rate during recessions and raising it during economic booms. Naturally, such response of the Fed to changes in economic conditions usually has some degree of uncertainty. 
+\paragraph{}
+Broadly, uncertainty about monetary policy can arise due to 2 reasons. First, there is uncertainty about those aspects of economic environment, which are most important to the monetary policy. Changes in inflationary expectations and financial market turmoil are some of the examples of such uncertainty. Second, there is uncertainty about what the Fed can/will do in response to changes in economic conditions. I mostly focus on monetary uncertainty arising from the second reason in this paper.
+\paragraph{}
+The Fed's ability to affect the economy via monetary policy varies over time. The main tool of the monetary policy is Fed Funds rate. The Fed stimulates the economy by slashing Fed Funds rate and cools the economy by raising Fed Funds rate. Thus low level of Fed Funds rate limits ability of the Fed to affect the economy. At zero lower bound (ZLB) Fed Funds rate is zero and the Fed has a very limited ability to conduct monetary policy by changing policy rate. ZLB implies very low monetary uncertainty, since Fed Funds rate is unlikely to move significantly in either direction. While theoretically possible, negative Fed Funds rate is very unlikely due to implementation difficulties. Furthermore, at ZLB an increase in Fed Funds rate at any given point in time is less likely as well. From the standpoint of baseline New Keynesian model, zero Fed Funds rate means that the Fed is likely to have negative desired Fed Funds rate. Thus positive growth news of small magnitude is likely to led to the Fed updating its desired Fed Funds rate to a less negative number and leaving actual Fed Funds rate at zero. Thus low interest rate implies low monetary uncertainty.
+\paragraph{}
+The manner in which the Fed conducts monetary policy varies over time and across Fed Chairmen. For example, in an attempt to increase transparency and clarity of monetary policy, the Fed introduced press-conferences following FOMC meetings in 2011. Ability of financial media to publicly question Fed Chairman on the monetary policy details and projections is likely to decrease monetary uncertainty. Historically, different Fed Chairmen preferred different ways to communicate monetary policy. The Fed during the periods of Volcker and Greenspan (1979-2006) maintained minimal communication policy in order to maximize Fed's flexibility. Starting from Bernanke, Fed Chairmen put more emphasis on detailed communication of monetary policy decisions and projections, likely leading to a decrease in monetary uncertainty. Clarity and consistency of monetary policy decisions is another factor of time-varying monetary uncertainty. For example, over 1979-1981 Fed Funds rate fluctuated widely, ranging between 8\% and 22\%. Perceived unpredictability of the Fed under Volcker leadership would likely imply high monetary uncertainty stemming from both economic conditions and Fed decision-makers. More recently, lack of consistency of the monetary policy over 2020-2022 as well as policy errors contributed to a high monetary uncertainty as of time of writing of this draft.
+\paragraph{}
+In conducting monetary policy, there is a tension between two objectives. On the one hand, the Fed wants to be able to adjust monetary policy rapidly as economic conditions change and as their understanding of the state of the economy evolves. On the other hand, The Fed tries to maintain consistent and predictable monetary policy to minimize risk of financial turmoil from sudden policy changes. Different Fed Chairmen chose different balance between these two objectives. The Fed during the periods of Volcker and Greenspan (1979-2006) maintained minimal communication policy in order to maximize Fed's flexibility. Starting from Bernanke, Fed Chairmen put more emphasis on detailed communication of monetary policy decisions and projections, likely leading to a decrease in monetary uncertainty. For example, in an attempt to increase transparency and clarity of monetary policy, the Fed introduced press-conferences following FOMC meetings in 2011. Ability of financial media to publicly question Fed Chairman on the monetary policy details and projections is likely to decrease monetary uncertainty. Clarity and continuity of monetary policy decisions is another factor of time-varying monetary uncertainty. For example, over 1979-1981 Fed Funds rate fluctuated widely, ranging between 8\% and 22\%. Perceived unpredictability of the Fed under Volcker leadership would likely imply high monetary uncertainty stemming from both economic conditions and Fed decision-makers. More recently, lack of consistency of the monetary policy over 2020-2022 as well as policy errors contributed to a high monetary uncertainty as of time of writing of this draft. Monetary uncertainty is usually high when past policy errors necessitate rapid readjustment of monetary policy.
+
+
+
+
+\end{document}
+
+
