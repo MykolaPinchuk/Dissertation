@@ -58,7 +58,7 @@
 %\doublespacing
 \setstretch{1.5}
 
-\section{Introduction} \label{sec:Model}
+\section{Introduction} 
 
 A price of an asset is a function of the information set of investors. Any movement in price must be driven by the arrival of new information. One example of such information is news about the state of the economy, i.e., macroeconomic news announcements (MNA). Counterintuitively, an extensive body of research over the recent decades failed to find a large directional response of stock prices to MNA surprises. The lack of this evidence is puzzling since it raises questions about the relevance of macroeconomic conditions to stock prices and contradicts the intuition of practitioners and academics.
 \paragraph{}
@@ -77,6 +77,11 @@ The literature on the behavior of stock prices during periods of MNA dates back 
 By uncovering and quantifying the large monetary channel of the stock response to major MNA, this paper contributes to monetary economics. The last two decades saw increased interest in asset pricing effects of monetary policy. Bernanke and Kuttner (2005) used high-frequency identification to argue that stocks react negatively to Fed Funds rate surprises. There is a growing body of research on the implications of zero lower bound (ZLB) for monetary transmission and asset prices. Swanson and Williams (2013, 2014) and Zhou (2014) focus on the response of forward rates to monetary news at ZLB. My results suggest that ZLB is an extreme case of low monetary uncertainty and is useful to isolate out cash flow channel of MNA response.
 \paragraph{}
 The paper is organized as follows. Section 2 explains the advantages of event studies for identifying the relation between asset prices and macroeconomic conditions. Section 3 contains a simple theoretical framework, which allows us to decompose the response into channels. Then Section 3 explains the intuition behind the idea of monetary uncertainty and its time variation. Section 4 discusses data sources, identifies types of MNA, and discusses the construction of monetary uncertainty proxy. Section 5 focuses on the response of stocks to major MNA and decomposes this response into cash flow and monetary channels using a simple statistical framework. Section 6 explores the cross-section of stocks by their response to major MNA. Section 7 concludes.
+
+\section{Literature} 
+
+[*** 3-5 pages on closely related papers and somewhat related papers ***].
+
 
 \section{Estimation of the response using event study}
 
@@ -147,6 +152,8 @@ Intuitively, this framework is based on time variation in the ability of the Fed
 The Fed determines monetary policy according to its mandate, trying to achieve price stability and maximum employment. Thus as the economic environment changes, the Fed is supposed to adjust its monetary policy. In practice, it usually means cutting the Fed Funds rate during recessions and raising it during economic booms. Naturally, the response of the Fed to changes in economic conditions usually has some degree of uncertainty. Such monetary uncertainty can vary due to two reasons. First, the Fed is often constrained in its ability to use its monetary policy tools to shape economic outcomes leading to lower monetary uncertainty. Second, the Fed occasionally changes the manner in which it implements monetary policy. For example, attempts to increase transparency and continuity of monetary policy often lead to a decrease in Fed flexibility and lower monetary uncertainty. I explain these two reasons in three paragraphs below.
 \paragraph{}
 The Fed's ability to affect the economy via monetary policy varies over time. The main tool of the monetary policy is the Fed Funds rate. The Fed stimulates the economy by slashing the Fed Funds rate and cools the economy by raising the Fed Funds rate. Thus a low level of the Fed Funds rate limits the ability of the Fed to affect the economy. At zero lower bound (ZLB) Fed Funds rate is zero and the Fed has a very limited ability to conduct monetary policy by changing the policy rate. ZLB implies very low monetary uncertainty since the Fed Funds rate is unlikely to move significantly in either direction. While theoretically possible, a negative Fed Funds rate is very unlikely due to implementation difficulties. Furthermore, at ZLB an increase in the Fed Funds rate at any given point in time is less likely as well. From the standpoint of the baseline New Keynesian model, a zero Fed Funds rate means that the Fed is likely to have a negative desired Fed Funds rate. Thus positive growth news of a small magnitude is likely to lead to the Fed updating its desired Fed Funds rate to a less negative number and leaving the actual Fed Funds rate at zero. Thus a low interest rate implies low monetary uncertainty. 
+[*** refactor/split this paragraph to be clear on NK story ***]
+[*** add a footnote on intervention ***]
 \paragraph{}
 A level of Fed Funds rate may not be the only constraint on Fed's ability to adjust monetary policy. A higher level of public debt relative to GDP could prevent the Fed from raising the policy rate for the fear of causing an unsustainably high cost of serving public debt. Between 1980 and 2019 debt to GDP ratio rose from 31\% to 104\%, possibly contributing to lower monetary uncertainty. 
 \paragraph{}
@@ -168,6 +175,8 @@ I use Bloomberg data on Black implied volatilities of US LIBOR rate swaptions to
 This paper uses the implied volatility of the 2-year Treasury as a proxy for monetary uncertainty. Figure 1 describes the time variation of monetary uncertainty. To extend my results to the period between 1980 and 1997, I use realized volatility of 2-year Treasury notes.
 \paragraph{}
 The idea that implied volatility of 2-year Treasury note yields captures monetary uncertainty relies on the notion that 2-year yield reflects monetary policy. Since the recent financial crisis, literature in both monetary economics and finance has usually used the 2-year Treasury yield as a proxy for monetary policy. Hanson and Stein (2015) use a 2-year rate to "capture full expected path of fed funds rate over the coming quarters in a simple and transparent manner". Nakamura and Steinsson (2018) use a 2-year nominal yield as a policy indicator while estimating the effect of monetary policy shock. Before 2009 most papers (Rigobon and Sack 2004, Bernanke and Kuttner 2005, Gurkaynak, Sack and Swanson 2005) proxied for monetary policy shock using Fed Funds futures and Eurodollar futures with expiration from 3 months to 1 year. Due to a prevalence of zero lower bound after 2009, it makes sense to use longer maturity to capture the forward guidance component of monetary policy.
+\\
+[*** Add discussion of why I use uncertainty word ***]
 
 \section{Stock Market Response to MNA} \label{sec:Model}
 
@@ -229,7 +238,8 @@ I decompose stock response to MNA surprise into channels using (7), an empirical
 \begin{equation}
     R_t = a + b*Surprise_t + c*\text{MU}_{t-1} + d*Surprise_t*\text{MU}_{t-1} + \epsilon_t.
 \end{equation}
-I proxy for monetary uncertainty using implied volatility of a 2-year Treasury rate 1 day before MNA. Controlling for interaction between monetary uncertainty and MNA surprise doubles the coefficient on MNA surprise. The coefficient on the interaction term is negative (-23 bps) and highly significant (t-statistic above 4). Consistent with the results in Table 6, adding the interaction term of surprise with a proxy for the stage of the business cycle (Chicago Fed National Activity Index, CFNAI) does not affect results.
+I proxy for monetary uncertainty using implied volatility of a 2-year Treasury rate 1 day before MNA$^1$. Controlling for interaction between monetary uncertainty and MNA surprise doubles the coefficient on MNA surprise. The coefficient on the interaction term is negative (-23 bps) and highly significant (t-statistic above 4). Consistent with the results in Table 6, adding the interaction term of surprise with a proxy for the stage of the business cycle (Chicago Fed National Activity Index, CFNAI) does not affect results.
+\footnotetext[1]{*** endo comment ***.}
 \paragraph{}
 One standard deviation of news surprise leads to 30 bps positive returns when the level of monetary uncertainty is zero. As monetary uncertainty increases, this positive response becomes weaker. When the implied volatility of the Treasury rate is equal to 1.3\%, the interaction term perfectly offsets the positive channel, and surprise does not affect stock prices. At levels of the implied volatility of the Treasury rate above 1.3\%, we are likely to see a negative response: stocks will fall in response to good growth news. 
 \paragraph{}
@@ -263,6 +273,10 @@ Overall, the results are consistent with the intuition that higher macroeconomic
 My results and their interpretation rely on my ability to accurately proxy for MU using the implied volatility of 2-year Treasuries. As mentioned previously, I follow the literature in arguing that variation in 2-year T-notes reflects changes in monetary policy by capturing both short-term rate and forward guidance. It may be possible to validate my framework and its interpretation by looking at longer-maturity interest rates. For example, a 10-year rate is likely to have a large component related to economic growth, making it unsuitable for capturing time-series variation in a risk-free rate channel.
 \paragraph{}
 Table 11 describes stock response to the MNA surprise using different rate maturities to proxy for monetary uncertainty. Column 1 repeats the results from Table 7. The coefficient on the interaction term is negative and highly significant. Column 2 uses implied volatility of a 5-year rate. The coefficient on the interaction term loses its significance so the interaction term becomes redundant. Column 3 uses the implied volatility of the 10-year rate. Surprisingly, now the coefficient on the interaction term is significantly positive, while the coefficient on surprise loses its significance. This implies that now instead of proxying for a negative risk-free rate channel, an interaction term captures a positive cash flow channel. This is consistent with the idea that at longer maturities interest rates reflect economic growth rather than monetary policy. Overall, this result reinforces the interpretation of cash flow and risk-free rate channels of MNA response as well as validates the interpretation of the 2-year rate as a proxy for monetary policy.
+
+[*** Split this subsection into 2: 6.3 Extrapolation and 6.4 Other results ***]
+[*** Add results with daily freq for a few MNA w/o good expectations data results ***]
+[*** Add rate response at ZLB to 6.4 ***]
 
 \section{MNA surprise in the cross-section} \label{sec:Model}
 
