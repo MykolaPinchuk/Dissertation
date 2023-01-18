@@ -7,7 +7,7 @@
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% raggedleft column X
 \usdate
 \usepackage[a4paper,bindingoffset=0.2in,%
-            left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
+left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
             footskip=.35in]{geometry}
             
 \newcommand{\owntag}[1]{\stepcounter{equation}\tag{\theequation, #1}}
@@ -34,7 +34,7 @@
 
 \title{\bf Monetary Uncertainty as a Determinant of the Response of Stock Market to Macroeconomic News}
 
-\date{9 January 2023 2022}  
+\date{16 January 2023}  
 
 \maketitle
 \thispagestyle{empty}
@@ -257,6 +257,29 @@ The decomposition provides a possible answer to why many papers (McQueen and Rol
 Another contribution of this framework is its implications for the effects of monetary policy. While ${a}_1$ and $\gamma_1$ are MNA-specific, $a_2$ should be the same for any MNA. I estimate ${a}_2$ equal to -8. This estimate is broadly consistent with the results in Bernanke and Kuttner (2005), as well as related papers, which estimate the sensitivity of the stock market to interest rate news around the monetary announcement. These papers obtain estimates between -5 and -10, consistent with my findings.
 \paragraph{}
 While I use 2-year Treasury yield to measure news about monetary policy, the strength of the monetary channel implies that it should affect yields at longer maturities. To answer this question, I estimate the sensitivity of interest rates to MNA surprise using Treasuries with maturities from 1 year to 30 years. Due to a lack of intraday data for most of these rates, I use daily data to estimate such sensitivities. Table 8 and Figure 3 describe the results. Consistent with the idea that MNA surprise contains important news about future monetary policy, the strongest response is at the maturities from 2 to 5 years. As maturity increases, the response of interest rates to MNA surprise weakens and falls to 1.26 bps, a 57\% decrease from 2.91 bps response at 3-year maturity. The positive response at a long end of a yield curve may reflect long-term growth expectations rather than monetary policy. 
+
+
+\subsection{Identification assumptions} 
+\label{sec:Model}
+[*** rbc model, nk model, two forces, connect mpu to nk model. mention possible role of meu in rbc model. thus identifying assumption. results to support these assumptions. what happens when assumptions fail. ***]
+
+The decomposition above is based on two assumptions. One of them is that only risk-free rate channel response to MNA surprise depends on MPU. This subsection explores this assumption.
+\paragraph{}
+Currently, Real Business Cycle (RBC) and New Keynesian (NK) are the two most frequently used macroeconomic models. In RBC model monetary policy is irrelevant. NK model adds frictions to the RBC model and explains why monetary policy could affect the economy. 
+\paragraph{}
+In a basic RBC model (Gali 2015, Chapter 2), the economy moves in response to technology shock and demand (preference) shock. These two shocks affect the real risk-free rate:
+\begin{equation}
+    R^F_t = c_0 + c_1 z_t + c_2 a_t,
+\end{equation}
+where $c_0, c_1, c_2$ are constants and $z_t$ and $a_t$ are the two shocks. Thus even in the absence of monetary policy the interest rate is constantly moving in response to macroeconomic shocks. 
+\paragraph{}
+NK model builds on this RBC model adding assumption about stocky prices. Since at each period only a fraction of producers get an opportunity to reset their prices, relative prices vary irrespective to fundamentals. This creates inefficiency. The only way to fully offset this inefficiency in NK model is for central bank to set price level in response to these shocks. Then no firm needs to reset prices, which restores the first-best allocation. Thus in the NK model the interest rate is set by the Fed. NK model suggests that the Fed should set interest rate to be equal to a natural rate of interest. This rule is not possible in practice since a natural rate of interest is not observable. Thus the Fed uses a Taylor Rule to set interest rates (Gali 2015, Chapter 4) :
+\begin{equation}
+    R^F_t = c_3 + \phi_{\pi} \pi_t + \phi_y \hat{y}_t,
+\end{equation}
+where $\hat{y_t} = log(frac{Y_t}{Y})$ is log deviation of output from its steady state and where $\phi_{\pi} > 0$ and $\phi_{y}$ are coefficients, determining the aggressiveness of the response function of the Fed. 
+
+
 
 \subsection{Extrapolation of the findings to earlier sample and other results} \label{sec:Model}
 
