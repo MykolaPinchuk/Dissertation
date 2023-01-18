@@ -237,7 +237,7 @@ Intuitively, MNA should affect stocks through 3 channels: expected cash flows, r
 
 \subsection{Decomposition of the response} \label{sec:Model}
 
-I decompose stock response to MNA surprise into channels using (7), an empirical counterpart to (5). Table 7 reports the estimates of the coefficients in the regression with an interaction term between MNA surprise and monetary uncertainty (MU):
+I decompose stock response to MNA surprise into channels using (7), an empirical counterpart to (5). Appendix C discusses econometric issues which may arise when estimating equations (2)-(5). Table 7 reports the estimates of the coefficients in the regression with an interaction term between MNA surprise and monetary uncertainty (MU):
 \begin{equation}
     R_t = a + b*Surprise_t + c*\text{MU}_{t-1} + d*Surprise_t*\text{MU}_{t-1} + \epsilon_t.
 \end{equation}
@@ -1204,5 +1204,19 @@ We can rewrite the state update equation as
 \end{align}
 
 We can think of uncertainty ${p_{t,t-1}}$ as a quantity, positively related to the uncertainty about the short-term interest rate. Then the whole Kalman Gain can be used as a proxy for monetary uncertainty $MU$. Difference between news and prior expectations $(m_t - \hat{i}_{t-1})$ is simply MNA shock $\epsilon_t$. Thus equation (B.10) implies that interest rate response is affine in an interaction between monetary uncertainty and MNA shock.
+
+
+
+\section{Appendix C: Estimation and econometric issues} \label{sec:Model}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{C\thechapter.\arabic{equation}}
+
+\paragraph{}
+This appendix describes econometric assumptions, needed for unbiased and consistent estimates of equations (2)-(5). Then it discusses what happens in case of violation of these assumptions.
+
+[*** 1. Assumptions for unbiased and consistent estimates
+     2. Measurement error in mna surprise***]
+
+
 
 \end{document}
