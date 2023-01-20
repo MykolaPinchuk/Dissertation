@@ -34,7 +34,7 @@ left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
 
 \title{\bf Monetary Uncertainty as a Determinant of the Response of Stock Market to Macroeconomic News}
 
-\date{18 January 2023}  
+\date{20 January 2023}  
 
 \maketitle
 \thispagestyle{empty}
@@ -137,6 +137,7 @@ Plugging (3) into (2) and rearranging the terms yields (4):
 \begin{equation}
     R_t = [a_1+a_2*\gamma_0]*\epsilon_t + [a_2\gamma_1]*MU_{t-1}*\epsilon_t + e_{3,t}.
 \end{equation}
+where $e_{3,t} = a_2e_{2,t}+e_{1,t}.$ 
 \paragraph{}
 Equation (B.10) from Appendix B suggests that $\gamma_0=0$. In subsequent sections, I empirically verify that $\gamma_0=0$. This allows me to simplify (4):
 \begin{equation}
@@ -1205,7 +1206,8 @@ We can rewrite the state update equation as
 
 We can think of uncertainty ${p_{t,t-1}}$ as a quantity, positively related to the uncertainty about the short-term interest rate. Then the whole Kalman Gain can be used as a proxy for monetary uncertainty $MU$. Difference between news and prior expectations $(m_t - \hat{i}_{t-1})$ is simply MNA shock $\epsilon_t$. Thus equation (B.10) implies that interest rate response is affine in an interaction between monetary uncertainty and MNA shock.
 
-
+\pagebreak
+\clearpage
 
 \section{Appendix C: Estimation and econometric issues} \label{sec:Model}
 \setcounter{equation}{0}
@@ -1213,9 +1215,41 @@ We can think of uncertainty ${p_{t,t-1}}$ as a quantity, positively related to t
 
 \paragraph{}
 This appendix describes econometric assumptions, needed for unbiased and consistent estimates of equations (2)-(5). Then it discusses what happens in case of violation of these assumptions.
+\paragraph{}
+For convenience, I repeat the main equation from my theoretical framework below together with their empirical counterparts:
+\begin{equation}
+    R_t = a_1*\epsilon_t + a_2*\Delta i_t + e_{1,t}.
+\end{equation}
+\begin{equation}
+    \Delta i_t = (\gamma_0 + \gamma_1*MU_{t-1})*\epsilon_t + e_{2,t}.
+\end{equation}
+Plugging (3) into (2) and rearranging the terms yields (4):
+\begin{equation}
+    R_t = [a_1+a_2*\gamma_0]*\epsilon_t + [a_2\gamma_1]*MU_{t-1}*\epsilon_t + e_{3,t}.
+\end{equation}
+where $e_{3,t} = a_2e_{2,t}+e_{1,t}.$ 
+\paragraph{}
+$\gamma_0=0$ simplifies (C3):
+\begin{equation}
+    R_t = [a_1]*\epsilon_t + [a_2\gamma_1]*MU_{t-1}*\epsilon_t + e_{3,t}.
+\end{equation}
+To estimate equations (C1), (C2), and (C4), I use their empirical counterparts\footnotetext[1]{I add the term with $MU_{t-1}$ into (C.6) and (C.7) to prevent omitted variable bias. While this term is not present in the theoretical counterparts of these regressions, it does not matter since in my regressions coefficients on these extra terms are zero.}:
+\begin{equation}
+    R_t = c_1*\epsilon_t + u_{1,t}.
+\end{equation}
+\begin{equation}
+    \Delta i_t = c_2*\epsilon_t + c_3*MU_{t-1}*\epsilon_t + c_4*MU_{t-1} + u_{2,t}.
+\end{equation}
+\begin{equation}
+    R_t = c_5*\epsilon_t + c_6*MU_{t-1}*\epsilon_t + c_7*MU_{t-1} + u_{3,t}.
+\end{equation}
+I estimate regression (C.5), since this is the standard way to estimate the response of stocks to MNA surprise. However, the theoretical equation (C.1) implies that the regression (C.5) suffers from omitted variable bias. Since $a_2 < 0$ and $cov(\Delta i_{t}, \epsilon_t) \ge 0$, $\hat{c_1}<a_1$. In some sense, the whole theoretical framework in Chapter 4 is an attempt to solve this omitted variable bias. Loosely speaking, I instrument for risk-free rate channel, corresponding to the omitted variable, by using variation in the monetary uncertainty $MU_t$. Thus the regression (C.7) should minimize this omitted variable bias and produce unbiased and consistent estimates of $c_5$ and $c_6$.
+\paragraph{}
+The necessary conditions for unbiased and consistent estimates of the coefficients in (C.6) and (C.7) include $\mathbb{E}[u_{2,t}|\epsilon_t]=0$ and 
+$\mathbb{E}[u_{3,t}|\epsilon_t]=0$. This means that MNA surprise should affect stocks and bonds only through cash-flow and risk-free rate channels. In the robustness checks, I show that adding interactions of MNA surprise with proxies for the risk premium does not affect estimates of $c_5$ and $c_6$. So even if this assumption is violated, it is unlikely to have material impact on my results.
+\paragraph{}
+It is impossible to precisely measure MNA surprise in real time. Thus my proxy for MNA surprise is likely to suffer from the measurement error of two types. Let $\epsilon^*_t$ be true MNA surprise. First, my observable $\epsilon_t$ is likely to be a noisy proxy for the true MNA surprise: $\epsilon_t = \epsilon^*_t + \delta_t, \delta_t \sim{N(0, \sigma^2)}$. Second, my estimate of market expectations of the announced value of a macroeconomic variable is not perfectly fresh. Thus my proxy for market expectations has not fully converged to the true market expectations, leading to larger $\epsilon_t$. Since this is mathematically equivalent to $\epsilon_t = \epsilon^*_t + \delta_t, \delta_t \sim{N(0, \sigma^2)}$, the measurement errors of the both types will produce the attenuation bias, i.e., estimates of all slope coefficients will be biased towards zero. Thus my estimates of the strength of the two channels are likely to be their lower bounds.
 
-[*** 1. Assumptions for unbiased and consistent estimates
-     2. Measurement error in mna surprise***]
 
 
 
