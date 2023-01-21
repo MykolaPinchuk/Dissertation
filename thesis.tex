@@ -34,7 +34,7 @@ left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
 
 \title{\bf Monetary Uncertainty as a Determinant of the Response of Stock Market to Macroeconomic News}
 
-\date{20 January 2023}  
+\date{21 January 2023}  
 
 \maketitle
 \thispagestyle{empty}
@@ -295,7 +295,8 @@ Table 11 describes stock response to the MNA surprise using different rate matur
 \paragraph{}
 It is possible that the controls above cannot fully capture RBC force. In that case my estimates of the risk-free rate channel will be confounded by this RBC force (i.e., growth channel). However, the results above imply that these two forces go in opposite directions. This is consistent with a variation of a Kalman filter (Appendix A), applied to broader macroeconomic uncertainty.  When macroeconomic and monetary uncertainties are high, both positive growth channel and negative risk-free rate channel will be stronger. Therefore, the measured strength of a negative risk-free rate channel will be biased towards zero. Then my results will measure a lower bound of the risk-free rate channel.
 
-\subsection{Extrapolation of the findings to earlier sample and other results} \label{sec:Model}
+\subsection{Extrapolation of the findings to earlier sample} 
+\label{sec:Model}
 
 One of the contributions of this paper is its ability to explain surprising past findings and reconcile them with our economic intuition. The previous subsection laid out this explanation qualitatively. The quantify this explanation, ideally, I have to run response regressions for the 1980-1997 sample. Unfortunately, this data is not available publicly. The second-best solution would be to use estimates from 1997-2019 regressions to measure the strength of the two channels. Then I could multiply the strength of the risk-free rate channel by monetary uncertainty, extrapolating the results back to the 1980s. Unfortunately, I am unable to implement this solution either, since I do not have implied volatilities of Treasuries before 1997.
 \paragraph{}
@@ -305,12 +306,16 @@ Table 9 reports the results of running regression (7) with realized volatility. 
 \paragraph{}
 Figure 4 shows the extrapolation of these results to the 1979-1997 sample. As explained above, the cash flow channel is constant at 20bps, while the risk-free rate channel depends on the level of realized volatility of the 2-year Treasury rate. Figure 4 describes the strength of these two channels over time. As expected, the negative risk-free rate channel was very strong in the 1980s. Between 1980 and 1987 it was larger in absolute value than the positive cash flow channel as shown by a red-shaded area. After 1987 with small exceptions positive cash flow channel dominated the negative risk-free rate channel (the green-shaded area) which is consistent with my main results.
 \paragraph{}
+[*** Add results with daily freq for a few MNA w/o good expectations data results ***]
+
+\subsection{Further results} 
+\label{sec:Model}
+
 Table 12 describes the response of interest rates across maturities to MNA surprise with an interaction term. While longer-maturity rates respond positively to MNA surprise, this response does not depend on the level of monetary uncertainty. This is consistent with the previous results and suggests that rates at maturities above 5 years do not reflect monetary policy, hence are unffected by monetary uncertainty.
 \paragraph{}
 Table 13 documents the response of interest rates across maturities to MNA in subsamples. ZLB subsample consists of periods when Fed Funds rate is below 0.25\%. The first two columns describe the response of 1-month ahead Fed Fund rate futures. There is no significant response during ZLB, while outside of ZLB the response is highly positive with a T-statistic of 9. This verifies the claim that at ZLB Fed Funds rate is not sensitive to economic news. Nest two columns show that at ZLB the sensitivity of 2-year Treasury rate is less than half compared to non-ZLB periods. As we move to longer-maturity rates this sensitivity gap shrinks. There is no significant difference in the sensitivity of 10-year Treasury rates depending on ZLB. This validates the claim that longer-maturity rates are not affected by monetary policy uncertainty.
-
-[*** Split this subsection into 2: 6.3 Extrapolation and 6.4 Other results ***]
-[*** Add results with daily freq for a few MNA w/o good expectations data results ***]
+\paragraph{}
+[*** results re #9 ***]
 
 \section{MNA surprise in the cross-section} \label{sec:Model}
 
