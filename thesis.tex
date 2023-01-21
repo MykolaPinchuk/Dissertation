@@ -315,7 +315,16 @@ Table 12 describes the response of interest rates across maturities to MNA surpr
 \paragraph{}
 Table 13 documents the response of interest rates across maturities to MNA in subsamples. ZLB subsample consists of periods when Fed Funds rate is below 0.25\%. The first two columns describe the response of 1-month ahead Fed Fund rate futures. There is no significant response during ZLB, while outside of ZLB the response is highly positive with a T-statistic of 9. This verifies the claim that at ZLB Fed Funds rate is not sensitive to economic news. Nest two columns show that at ZLB the sensitivity of 2-year Treasury rate is less than half compared to non-ZLB periods. As we move to longer-maturity rates this sensitivity gap shrinks. There is no significant difference in the sensitivity of 10-year Treasury rates depending on ZLB. This validates the claim that longer-maturity rates are not affected by monetary policy uncertainty.
 \paragraph{}
-[*** results re #9 ***]
+Tables 17 and 18 show the results of regressions with interaction terms including more control variables. I include commonly used macroeconomic state variables such as Chicago Fed National Activity Index (CFNAI), VIX, P/D ratio, and inflation. Additionally, to see whether the level of risk-free rate can capture the idea of monetary uncertainty better than its implied volatility, I add the level of Fed Funds rate as well as 2-year Treasury yield. Columns 3 and 4 of Table 17 show that my implied volatility seems to be a better proxy for monetary uncertainty than a level of the risk-free rate. A negative coefficient on the interaction term between surprise and a level of risk-free rate means that a higher risk-free rate implies a weaker response, which contradicts the idea of monetary uncertainty. This likely happens because implied volatility (MU) already captures the monetary uncertainty effect. Then negative coefficient on the risk-free rate could capture the nonlinear effect of the risk-free rate and implied volatility of treasuries on the response of bonds to MNA surprise. While in specification 2 such effect is linear, i.e., the response increases proportionally to the implied volatility of treasuries, in specifications 3 and 4 such effect is concave: with higher risk-free rate the response gets stronger, but at decreasing rate. The last column shows that including other macroeconomic and financial variables has little effect on the results. Higher CFNAI makes the response of rates to MNA surprise stronger. Higher CFNAI means faster economic growth. Alternatively, we can interpret it as larger output gap. Thus positive coefficient captures larger movement in rates when output gap is higher, consistent with implications of a Taylor Rule. Negative coefficient on VIX means that the response is weaker when VIX is high. In my sample, variation in VIX is dominated by a huge spike around Great Financial Crisis 2008-2009. Since during most of that period Fed Funds rate was zero, this negative coefficient is likely to capture low sensitivity of risk-free rate at ZLB.
+\paragraph{}
+Table 18 describes the stock response to MNA including those variables, which were significant for in the previous table. Column 4 shows that including CFNAI and VIX as interaction terms have little effect on the coefficient on MU*MNA surprise. This means that CFNAI and VIX can not capture monetary channel. Column 3 shows that CFNAI does not affect the coefficient on MNA surprise. Column 4 implies that including VIX interaction term decreases the estimate of the cash-flow channel. This likely means that VIX can partially capture time variation in the positive cash flow channel. When VIX is high, such channel is likely to be stronger. This is similar to the previous results where higher macroeconomic uncertainty (or higher implied volatility of Treasury bonds with longer maturities) captured positive cash flow channel. I interpret this result as evidence that VIX is a noisy proxy for broad macroeconomic uncertainty and partially captures positive cash flow channel.
+
+
+
+
+
+
+
 
 \section{MNA surprise in the cross-section} \label{sec:Model}
 
@@ -1143,6 +1152,138 @@ FOMC & -0.01 & -0.29 & 0.29 & 5.25 & -0.20 \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sat, Jan 21, 2023 - 9:42:13 AM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{Response of T-notes to MNA surprise with an interaction term, more control variables}} 
+  \label{} 
+    \begin{flushleft}
+    {\medskip\small
+ The table presents the response of 2-year Treasury notes to MNA surprise. I add interaction terms with financial and macroeconomic variables, such as implied volatility of 2-year Treasuries (i.e., monetary uncertainty, MU), Chicago Fed National Activity Index (CFNAI), VIX, price/dividend ratio, and inflation. Additionally, I include proxies fro risk-free rate, such as Fed Funds Rate (FFR) and 2-year T-notes (TN2).}
+    \medskip
+    \end{flushleft}
+  \footnotesize
+{\renewcommand{\arraystretch}{0.76}
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{5}{c}{\textit{Dependent variable: $\Delta i_2$}} \\ 
+\cline{2-6} 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\ 
+\hline \\[-1.8ex] 
+ Surprise & 2.16$^{***}$ & 0.26 & $-$0.03 & 0.02 & 0.56 \\ 
+  & [17.35] & [0.74] & [$-$0.09] & [0.04] & [1.13] \\ 
+  & & & & & \\ 
+ MU &  & 1.07$^{**}$ & 1.53$^{**}$ & 1.84$^{***}$ & 1.66$^{***}$ \\ 
+  &  & [2.29] & [2.41] & [2.68] & [2.73] \\ 
+  & & & & & \\ 
+ FFR &  &  & $-$0.11 &  &  \\ 
+  &  &  & [$-$1.27] &  &  \\ 
+  & & & & & \\ 
+ TN2 &  &  &  & $-$0.16 &  \\ 
+  &  &  &  & [$-$1.62] &  \\ 
+  & & & & & \\ 
+ CFNAI &  &  &  &  & $-$0.45$^{*}$ \\ 
+  &  &  &  &  & [$-$1.72] \\ 
+  & & & & & \\ 
+ VIX &  &  &  &  & $-$0.03 \\ 
+  &  &  &  &  & [$-$1.34] \\ 
+  & & & & & \\ 
+ P/D &  &  &  &  & $-$0.25 \\ 
+  &  &  &  &  & [$-$1.52] \\ 
+  & & & & & \\ 
+ Infl &  &  &  &  & 0.17 \\ 
+  &  &  &  &  & [1.29] \\ 
+  & & & & & \\ 
+ Surprise*MU &  & 2.76$^{***}$ & 3.86$^{***}$ & 4.00$^{***}$ & 4.08$^{***}$ \\
+  &  & [5.72] & [6.39] & [6.16] & [6.20] \\ 
+  & & & & & \\ 
+ Surprise*FFR &  &  & $-$0.21$^{**}$ &  &  \\ 
+  &  &  & [$-$2.57] &  &  \\ 
+  & & & & & \\ 
+ Surprise*TN2 &  &  &  & $-$0.23$^{**}$ &  \\ 
+  &  &  &  & [$-$2.42] &  \\ 
+  & & & & & \\ 
+ Surprise*CFNAI &  &  &  &  & 0.59$^{**}$ \\ 
+  &  &  &  &  & [2.21] \\ 
+  & & & & & \\ 
+ Surprise*VIX &  &  &  &  & $-$0.04$^{**}$ \\ 
+  &  &  &  &  & [$-$2.31] \\ 
+  & & & & & \\ 
+ Surprise*P/D &  &  &  &  & $-$0.26$^{*}$ \\ 
+  &  &  &  &  & [$-$1.76] \\ 
+  & & & & & \\ 
+ Surprise*Infl &  &  &  &  & $-$0.23$^{*}$ \\ 
+  &  &  &  &  & [$-$1.91] \\ 
+  & & & & & \\ 
+ Constant & $-$0.01 & $-$0.68$^{**}$ & $-$0.77$^{**}$ & $-$0.78$^{**}$ & $-$0.64 \\ 
+  & [$-$0.08] & [$-$2.18] & [$-$2.34] & [$-$2.43] & [$-$1.40] \\ 
+  & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,008 & 1,005 & 1,001 & 1,001 & 963 \\ 
+Adjusted R$^{2}$ & 0.23 & 0.26 & 0.27 & 0.27 & 0.28 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\end{tabular}  
+}
+\end{table}
+
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sat, Jan 21, 2023 - 9:42:18 AM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{Response of stocks to MNA surprise with an interaction term, more control variables}} 
+  \label{} 
+    \begin{flushleft}
+    {\medskip\small
+ The table presents the response of SP500 to MNA surprise. I add interaction terms with macroeconomic variables, such as implied volatility of 2-year Treasuries(i.e., monetary uncertainty, MU), Chicago Fed National Activity Index (CFNAI), VIX, price/dividend ratio, and inflation.}
+    \medskip
+    \end{flushleft}
+  \small
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{SP500} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Surprise & 0.16$^{***}$ & 0.30$^{***}$ & 0.29$^{***}$ & 0.17$^{***}$ \\ 
+  & [11.48] & [7.83] & [7.43] & [3.31] \\ 
+  & & & & \\ 
+ MU &  & 0.004 & 0.01 & $-$0.002 \\ 
+  &  & [0.08] & [0.10] & [$-$0.03] \\ 
+  & & & & \\ 
+ CFNAI &  &  & $-$0.001 & 0.01 \\ 
+  &  &  & [$-$0.02] & [0.33] \\ 
+  & & & & \\ 
+ VIX &  &  &  & 0.001 \\ 
+  &  &  &  & [0.69] \\ 
+  & & & & \\ 
+ Surprise*MU &  & $-$0.21$^{***}$ & $-$0.21$^{***}$ & $-$0.25$^{***}$ \\ 
+  &  & [$-$4.05] & [$-$4.04] & [$-$4.34] \\ 
+  & & & & \\ 
+ Surprise*CFNAI &  &  & $-$0.06$^{***}$ & 0.01 \\ 
+  &  &  & [$-$3.25] & [0.49] \\ 
+  & & & & \\ 
+ Surprise*VIX &  &  &  & 0.01$^{***}$ \\ 
+  &  &  &  & [3.50] \\ 
+  & & & & \\ 
+ Constant & 0.01 & 0.01 & 0.01 & $-$0.01 \\ 
+  & [0.65] & [0.17] & [0.24] & [$-$0.24] \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 986 & 986 & 986 & 946 \\ 
+Adjusted R$^{2}$ & 0.12 & 0.13 & 0.14 & 0.14 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
 
 
 \pagebreak
