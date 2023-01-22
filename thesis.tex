@@ -306,7 +306,14 @@ Table 9 reports the results of running regression (7) with realized volatility. 
 \paragraph{}
 Figure 4 shows the extrapolation of these results to the 1979-1997 sample. As explained above, the cash flow channel is constant at 20bps, while the risk-free rate channel depends on the level of realized volatility of the 2-year Treasury rate. Figure 4 describes the strength of these two channels over time. As expected, the negative risk-free rate channel was very strong in the 1980s. Between 1980 and 1987 it was larger in absolute value than the positive cash flow channel as shown by a red-shaded area. After 1987 with small exceptions positive cash flow channel dominated the negative risk-free rate channel (the green-shaded area) which is consistent with my main results.
 \paragraph{}
-[*** Add results with daily freq for a few MNA w/o good expectations data results ***]
+By definition, extrapolation cannot verify the validity of my results. I cannot directly estimate the response in the earlier sample since that data is not available in public access. Thus the best I can do is to use daily data and impute expectations of MNA using past values of that macroeconomic variable. Tables 19 and 20 describe results for NFP announcements in 1979-2019 sample. I was not able to obtain dates for other MNA. 
+\paragraph{}
+Table 19 describes the response of stocks and bonds to MNA surprises via a simple OLS regression. I estimate MNA surprise by taking difference between announced NFP growth rate and average NFP growth rate over the last 3 months. Column 1 shows that during 1979-1997 the response of stocks to MNA surprise was 5bps. In the later sample, this response increased to 30 bps. This is consistent with my main argument that a weaker risk-free rate channel in the second part of the sample led to a stronger response of stocks to MNA surprise. Columns 3 and 4 show that rates responded stronger in the earlier sample. A stronger risk-free rate channel is one possible explanation for this result.
+\paragraph{}
+Table 20 reports the results of the regressions with interaction terms. To proxy for monetary uncertainty, I use realized volatility of 2-year Treasury notes, since implied volatility is not available over the earlier sample. Column 1 shows that over the whole sample, there is a positive cash flow channel (28 bps) and a negative risk-free rate channel (-16 bps). In the later sample (column 3) the coefficients appear to be larger than in the earlier sample (column 2). One possible explanation is that my proxy for market expectations in the earlier sample was worse due to larger volatility in NFP growth in the early 1980s. This implies that the estimates in the earlier sample suffer from a larger attenuation bias. Columns 4, 5, and 6 show the response of 2-year Treasury rates to the MNA surprise. The results are not very different across subsamples and imply that this response is stronger when monetary uncertainty is higher. Similarly to the results from Table 19, these estimates suffer from low statistical power. Overall, coefficient estimates from Tables 19 and 20 are broadly consistent with the main results and support the monetary uncertainty explanation.
+\paragraph{}
+The results in Tables 19 and 20 are very noisy. Adjusted $R^2$ is always below 2\% and large standard errors mean that few coefficients are statistically significant. As I argued above, using high-frequency asset prices and surveys to estimate expectations lead to a large increase in statistical power. Without them, it is hard to say whether these estimates are statistically meaningful and not happened to be such just by chance.
+
 
 \subsection{Further results} 
 \label{sec:Model}
@@ -318,13 +325,6 @@ Table 13 documents the response of interest rates across maturities to MNA in su
 Tables 17 and 18 show the results of regressions with interaction terms including more control variables. I include commonly used macroeconomic state variables such as Chicago Fed National Activity Index (CFNAI), VIX, P/D ratio, and inflation. Additionally, to see whether the level of risk-free rate can capture the idea of monetary uncertainty better than its implied volatility, I add the level of Fed Funds rate as well as 2-year Treasury yield. Columns 3 and 4 of Table 17 show that my implied volatility seems to be a better proxy for monetary uncertainty than a level of the risk-free rate. A negative coefficient on the interaction term between surprise and a level of risk-free rate means that a higher risk-free rate implies a weaker response, which contradicts the idea of monetary uncertainty. This likely happens because implied volatility (MU) already captures the monetary uncertainty effect. Then negative coefficient on the risk-free rate could capture the nonlinear effect of the risk-free rate and implied volatility of treasuries on the response of bonds to MNA surprise. While in specification 2 such effect is linear, i.e., the response increases proportionally to the implied volatility of treasuries, in specifications 3 and 4 such effect is concave: with higher risk-free rate the response gets stronger, but at decreasing rate. The last column shows that including other macroeconomic and financial variables has little effect on the results. Higher CFNAI makes the response of rates to MNA surprise stronger. Higher CFNAI means faster economic growth. Alternatively, we can interpret it as larger output gap. Thus positive coefficient captures larger movement in rates when output gap is higher, consistent with implications of a Taylor Rule. Negative coefficient on VIX means that the response is weaker when VIX is high. In my sample, variation in VIX is dominated by a huge spike around Great Financial Crisis 2008-2009. Since during most of that period Fed Funds rate was zero, this negative coefficient is likely to capture low sensitivity of risk-free rate at ZLB.
 \paragraph{}
 Table 18 describes the stock response to MNA including those variables, which were significant for in the previous table. Column 4 shows that including CFNAI and VIX as interaction terms have little effect on the coefficient on MU*MNA surprise. This means that CFNAI and VIX can not capture monetary channel. Column 3 shows that CFNAI does not affect the coefficient on MNA surprise. Column 4 implies that including VIX interaction term decreases the estimate of the cash-flow channel. This likely means that VIX can partially capture time variation in the positive cash flow channel. When VIX is high, such channel is likely to be stronger. This is similar to the previous results where higher macroeconomic uncertainty (or higher implied volatility of Treasury bonds with longer maturities) captured positive cash flow channel. I interpret this result as evidence that VIX is a noisy proxy for broad macroeconomic uncertainty and partially captures positive cash flow channel.
-
-
-
-
-
-
-
 
 \section{MNA surprise in the cross-section} \label{sec:Model}
 
@@ -1303,15 +1303,15 @@ Adjusted R$^{2}$ & 0.12 & 0.13 & 0.14 & 0.14 \\
 \\[-1.8ex] & \multicolumn{2}{c}{SP500} & \multicolumn{2}{c}{$\Delta i_2$} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
 \hline \\[-1.8ex] 
- Surprise & 0.05 & 0.30$^{**}$ & 1.25 & 1.85$^{*}$ \\ 
-  & [0.72] & [2.32] & [0.95] & [1.90] \\ 
+ Surprise & 0.05 & 0.30$^{**}$ & 2.69$^{**}$ & 1.85$^{*}$ \\ 
+  & [0.72] & [2.32] & [1.99] & [1.90] \\ 
   & & & & \\ 
- Constant & 0.19$^{***}$ & 0.19$^{***}$ & $-$1.28 & 0.04 \\ 
-  & [4.57] & [3.20] & [$-$1.23] & [0.08] \\ 
+ Constant & 0.19$^{***}$ & 0.19$^{***}$ & $-$1.35 & 0.04 \\ 
+  & [4.57] & [3.20] & [$-$1.31] & [0.08] \\ 
   & & & & \\ 
 \hline \\[-1.8ex] 
 Subsample & 1979-1997 & 1997-2019 & 1979-1997 & 1997-2019 \\ 
-Observations & 207 & 270 & 210 & 270 \\ 
+Observations & 207 & 270 & 206 & 270 \\ 
 Adjusted R$^{2}$ & $-$0.002 & 0.02 & $-$0.001 & 0.01 \\ 
 \hline 
 \hline \\[-1.8ex] 
@@ -1339,17 +1339,17 @@ Adjusted R$^{2}$ & $-$0.002 & 0.02 & $-$0.001 & 0.01 \\
 \\[-1.8ex] & \multicolumn{3}{c}{SP500} & \multicolumn{3}{c}{$\Delta i_2$} \\ 
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
 \hline \\[-1.8ex] 
- Surprise & 0.28$^{**}$ & 0.19 & 0.49$^{**}$ & $-$0.21 & $-$2.63 & 0.25 \\ 
-  & [2.22] & [1.21] & [1.97] & [$-$0.13] & [$-$0.77] & [0.14] \\ 
+ Surprise & 0.30$^{**}$ & 0.19 & 0.49$^{**}$ & $-$0.21 & $-$2.63 & 0.25 \\ 
+  & [2.39] & [1.21] & [1.97] & [$-$0.13] & [$-$0.77] & [0.14] \\ 
   & & & & & & \\ 
- Vol & 0.08 & 0.06 & $-$0.13 & $-$2.45$^{**}$ & $-$2.72 & $-$0.22 \\ 
-  & [0.84] & [0.63] & [$-$0.51] & [$-$1.97] & [$-$1.18] & [$-$0.11] \\ 
+ Vol & 0.005 & 0.06 & $-$0.13 & $-$2.45$^{**}$ & $-$2.72 & $-$0.22 \\ 
+  & [0.05] & [0.63] & [$-$0.51] & [$-$1.97] & [$-$1.18] & [$-$0.11] \\ 
   & & & & & & \\ 
- Surprise*Vol & $-$0.16 & $-$0.17 & $-$0.77 & 2.25 & 4.00 & 4.43 \\ 
-  & [$-$1.19] & [$-$1.14] & [$-$1.29] & [1.41] & [1.36] & [1.05] \\ 
+ Surprise*Vol & $-$0.28$^{*}$ & $-$0.17 & $-$0.77 & 2.25 & 4.00 & 4.43 \\ 
+  & [$-$1.90] & [$-$1.14] & [$-$1.29] & [1.41] & [1.36] & [1.05] \\ 
   & & & & & & \\ 
- Constant & 0.15$^{**}$ & 0.12 & 0.21$^{**}$ & 0.68 & 0.65 & 0.15 \\ 
-  & [2.38] & [1.42] & [2.09] & [0.82] & [0.31] & [0.19] \\ 
+ Constant & 0.17$^{***}$ & 0.12 & 0.21$^{**}$ & 0.68 & 0.65 & 0.15 \\ 
+  & [2.74] & [1.42] & [2.09] & [0.82] & [0.31] & [0.19] \\ 
   & & & & & & \\ 
 \hline \\[-1.8ex] 
 Subsample & 1979-2019 & 1979-1997 & 1997-2019 & 1979-2019 & 1979-1997 & 1997-2019 \\ 
