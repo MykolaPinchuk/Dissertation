@@ -34,7 +34,7 @@ left=0.8in,right=0.8in,top=1in,bottom=0.8in,%
 
 \title{\bf Monetary Uncertainty as a Determinant of the Response of Stock Market to Macroeconomic News}
 
-\date{06 February 2023}  
+\date{21 February 2023}  
 
 \maketitle
 \thispagestyle{empty}
@@ -332,6 +332,8 @@ Table 15 documents the response of interest rates across maturities to MNA in su
 Tables 16 and 17 show the results of regressions with interaction terms including more control variables. I include commonly used macroeconomic state variables such as Chicago Fed National Activity Index (CFNAI), VIX, P/D ratio, and inflation. Additionally, to see whether the level of risk-free rate can capture the idea of monetary uncertainty better than its implied volatility, I add the level of Fed Funds rate as well as 2-year Treasury yield. Columns 3 and 4 of Table 16 show that my implied volatility seems to be a better proxy for monetary uncertainty than a level of the risk-free rate. A negative coefficient on the interaction term between surprise and a level of risk-free rate means that a higher risk-free rate implies a weaker response, which contradicts the idea of monetary uncertainty. This likely happens because implied volatility (MU) already captures the monetary uncertainty effect. Then negative coefficient on the risk-free rate could capture the nonlinear effect of the risk-free rate and implied volatility of treasuries on the response of bonds to MNA surprise. While in specification 2 such effect is linear, i.e., the response increases proportionally to the implied volatility of treasuries, in specifications 3 and 4 such effect is concave: with higher risk-free rate the response gets stronger, but at a decreasing rate. The last column shows that including other macroeconomic and financial variables has little effect on the results. Higher CFNAI makes the response of rates to MNA surprise stronger. Higher CFNAI means faster economic growth. Alternatively, we can interpret CFNAI as a larger output gap. Thus positive coefficient captures larger movement in rates when the output gap is higher, consistent with the implications of a Taylor Rule. A negative coefficient on VIX means that the response is weaker when VIX is high. In my sample, variation in VIX is dominated by a huge spike during Great Financial Crisis 2008-2009. Since during most of that period Fed Funds rate was zero, this negative coefficient is likely to capture low sensitivity of risk-free rate at ZLB.
 \paragraph{}
 Table 17 describes the stock response to MNA including those variables, which were significant in the previous table. Column 4 shows that including CFNAI and VIX as interaction terms has little effect on the coefficient on MU*Surprise. This means that CFNAI and VIX can not capture monetary channel. Column 3 shows that CFNAI does not affect the coefficient on MNA surprise. Column 4 implies that including VIX interaction term decreases the estimate of the cash-flow channel. This likely means that VIX can partially capture time variation in the positive cash flow channel. When VIX is high, this channel is likely to be stronger. This is similar to the previous results where higher macroeconomic uncertainty (or higher implied volatility of Treasury bonds with longer maturities) captured positive cash flow channel. I interpret this result as evidence that VIX is a noisy proxy for broad macroeconomic uncertainty and partially captures positive cash flow channel.
+\paragraph{}
+Table 21 describes the response of rates to MNA surprise controlling for implied volatility of rates of the same maturity. The results show that increased sensitivity of interest rates to MNA surprise holds only for 2-year rates. 5-year rates respond more to MNA surprise when their implied volatility is higher, but this pattern is barely significant. The response of 10-year rates to MNA shock does not depend on their implied volatility. These results rule out a concern that my results may be mechanical and capture a pattern, which may be generally true for interest rates at any maturity.
 
 \section{MNA surprise in the cross-section} \label{sec:Model}
 
@@ -1417,6 +1419,59 @@ FOMC & -0.01 & -0.29 & 0.29 & 5.25 & -0.20 \\
 \hline \\[-1.8ex] 
 \end{tabular} 
 \end{table} 
+
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Tue, Feb 21, 2023 - 11:06:25 AM
+\begin{table}[!htbp] \centering 
+  \caption{\textbf{Response of rates to MNA surprise with maturity-matched interaction term}} 
+  \label{} 
+  \begin{flushleft}
+    {\medskip\small
+ The table presents the response of Treasuries to MNA surprise at 2, 5, and 10-year maturities. In each regression, I control for implied volatility of Treasuries of the same maturity.}
+    \medskip
+    \end{flushleft}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{2}{c}{$\Delta_{i_2}$} & \multicolumn{2}{c}{$\Delta_{i_5}$} & \multicolumn{2}{c}{$\Delta_{i_{10}}$} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ Surprise & 2.16$^{***}$ & 0.26 & 2.54$^{***}$ & 1.44$^{**}$ & 1.85$^{***}$ & 1.65$^{***}$ \\ 
+  & [17.35] & [0.74] & [18.32] & [2.36] & [18.52] & [3.24] \\ 
+  & & & & & & \\ 
+ ImpVol2 &  & 1.07$^{**}$ &  &  &  &  \\ 
+  &  & [2.29] &  &  &  &  \\ 
+  & & & & & & \\ 
+ Surprise*ImpVol &  & 2.76$^{***}$ &  &  &  &  \\ 
+  &  & [5.72] &  &  &  &  \\ 
+  & & & & & & \\ 
+ ImpVol5 &  &  &  & 1.57$^{**}$ &  &  \\ 
+  &  &  &  & [2.19] &  &  \\ 
+  & & & & & & \\ 
+ Surprise*ImpVol5 &  &  &  & 1.28$^{*}$ &  &  \\ 
+  &  &  &  & [1.82] &  &  \\ 
+  & & & & & & \\ 
+ ImpVol10 &  &  &  &  &  & 1.03$^{*}$ \\ 
+  &  &  &  &  &  & [1.72] \\ 
+  & & & & & & \\ 
+ Surprise*ImpVol10 &  &  &  &  &  & 0.21 \\ 
+  &  &  &  &  &  & [0.38] \\ 
+  & & & & & & \\ 
+ Constant & $-$0.01 & $-$0.68$^{**}$ & $-$0.04 & $-$1.30$^{**}$ & $-$0.02 & $-$0.89$^{*}$ \\ 
+  & [$-$0.08] & [$-$2.18] & [$-$0.32] & [$-$2.23] & [$-$0.19] & [$-$1.74] \\ 
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,008 & 1,005 & 1,008 & 1,005 & 1,008 & 1,005 \\ 
+Adjusted R$^{2}$ & 0.23 & 0.26 & 0.25 & 0.25 & 0.25 & 0.25 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
 
 
 
